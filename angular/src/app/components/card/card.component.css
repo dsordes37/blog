@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    height: 7rem;
+    cursor: pointer;
+    
+}.container:hover{
+    background-color: rgb(26, 26, 26);
+    border: 5px solid rgb(26, 26, 26);
+}
+img{
+    object-fit: cover;
+    object-position: center top;
+    height: 100%;
+    width: 30%;
+    margin-right: 1rem;
+}.date{
+    font-size: .7rem;
+    color: gray;
+}

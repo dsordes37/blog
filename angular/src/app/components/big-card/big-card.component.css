@@ -1,10 +1,13 @@
 .container{
-    height: 40rem;
+    height: 27rem;
+}.container:hover{
+    background-color: rgb(26, 26, 26);
+    border: 5px solid rgb(26, 26, 26);
 }
 img{
     object-fit: cover;
     object-position: center top;
-    height: 55%;
+    height: 70%;
     width: 100%;
 }.date{
     font-size: .7rem;

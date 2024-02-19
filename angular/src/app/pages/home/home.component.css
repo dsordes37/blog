@@ -4,4 +4,7 @@
     margin: 2.5rem;
 }.articles>div{
     width: 45%;
+}hr{
+    margin: 1.3rem 0;
+    border: 1px solid rgb(60, 60, 60);
 }
