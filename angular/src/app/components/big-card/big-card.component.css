@@ -1,0 +1,16 @@
+.container{
+    height: 40rem;
+}
+img{
+    object-fit: cover;
+    object-position: center top;
+    height: 55%;
+    width: 100%;
+}.date{
+    font-size: .7rem;
+    color: gray;
+}h2{
+    font-size: 1.7rem;
+}p{
+    color: gray;
+}
