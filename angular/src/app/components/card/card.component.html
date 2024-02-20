@@ -1,7 +1,15 @@
-<div class="container">
+<a [routerLink]="['./content', id]" class="container">
+    <img src="{{img}}" alt="imagem">
+    <div>
+        <span class="date">{{date}}</span>
+        <h3>{{title}}</h3>
+    </div>
+</a>
+
+<!--
     <img src="https://auditoriobotucatu.com.br/wp-content/uploads/2024/02/Trailer-de-Deadpool-3-quebra-recorde-de-audiencia-e-supera.jpg" alt="imagem">
     <div>
         <span class="date">February 15, 2024</span>
         <h3>Trailer de Deadpool 3 quebra a internet. </h3>
     </div>
-</div>
+-->

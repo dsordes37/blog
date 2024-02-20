@@ -1,5 +1,6 @@
 .container{
     height: 27rem;
+    display: block;
 }.container:hover{
     background-color: rgb(26, 26, 26);
     border: 5px solid rgb(26, 26, 26);

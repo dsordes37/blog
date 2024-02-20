@@ -1,6 +1,12 @@
-<div class="container">
+<a [routerLink]="['./content', id]" class="container">
+    <img src="{{img}}" alt="capa">
+    <span class="date">{{date}}</span>
+    <h2>{{title}}</h2>
+    <p>{{desc}}</p>
+</a>
+
+<!--
     <img src="https://us-tuna-sounds-images.voicemod.net/d17b361f-9419-4bf4-aa9f-4265c54b1eb1-1679686033635.jpg" alt="darth vader gordola">
     <span class="date">February 19, 2024</span>
     <h2>Darth Vader contrata devs</h2>
-    <p>Darth Vader procura desenvolvedores front-end que saibam utilizar angular </p>
-</div>
+-->
