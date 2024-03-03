@@ -10,6 +10,9 @@ import { TitleComponent } from './components/title/title.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContentComponent } from './pages/content/content.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,9 @@ import { ContentComponent } from './pages/content/content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
