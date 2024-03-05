@@ -27,4 +27,7 @@ export class BigCardComponent implements OnInit {
   @Input()
   id:string="0";
 
+  @Input()
+  href:string='';
+
 }

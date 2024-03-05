@@ -3,14 +3,22 @@
 
 <div class="articles">
     <div class="main_article">
-        <app-big-card img="https://us-tuna-sounds-images.voicemod.net/d17b361f-9419-4bf4-aa9f-4265c54b1eb1-1679686033635.jpg" date="18 February, 2024" title="Darth Vader contrata devs" desc="Darth Vader procura desenvolvedores front-end com experiência no uso de angular." id="0" ></app-big-card>
+        <app-big-card img="{{news.articles[0].urlToImage}}" date="{{news.articles[0].publishedAt}}" title="{{news.articles[0].title}}" desc="{{news.articles[0].description}}" id="0" href="{{news.articles[0].url}}"></app-big-card>
     </div>
     <div class="other_articles">
-        <app-card img="https://auditoriobotucatu.com.br/wp-content/uploads/2024/02/Trailer-de-Deadpool-3-quebra-recorde-de-audiencia-e-supera.jpg" date="February 15, 2024" title="Trailer de Deadpool 3 quebra a internet." id="1" ></app-card>
+        <app-card  img="{{news.articles[1].urlToImage}}" title="{{news.articles[1].title}}" date="{{news.articles[1].publishedAt}}" href="{{news.articles[1].url}}"></app-card>
         <hr>
+        <app-card  img="{{news.articles[2].urlToImage}}" title="{{news.articles[2].title}}" date="{{news.articles[2].publishedAt}}" href="{{news.articles[2].url}}"></app-card>
+        <hr>
+        <app-card  img="{{news.articles[3].urlToImage}}" title="{{news.articles[3].title}}" date="{{news.articles[3].publishedAt}}" href="{{news.articles[3].url}}"></app-card>
+
+
+        <!--
+        <app-card img="https://auditoriobotucatu.com.br/wp-content/uploads/2024/02/Trailer-de-Deadpool-3-quebra-recorde-de-audiencia-e-supera.jpg" date="February 15, 2024" title="Trailer de Deadpool 3 quebra a internet."  ></app-card>
+        
         <app-card img="https://proxy.olhardigital.com.br/wp-content/uploads/2024/01/imagem_2024-01-31_001037382.png" date="January 9, 2024" title="Começa o arco de Egg Head no anime de One Piece." id="2" ></app-card>
-        <hr>
-        <app-card img="https://conteudo.imguol.com.br/c/colunas/c7/2024/02/15/fanfour-abre-1707982357492_v2_900x506.png" date="February 14, 2024" title="Marvel anuncia elenco do novo filme do quarteto fantástico" id="3" ></app-card>
+        
+        <app-card img="https://conteudo.imguol.com.br/c/colunas/c7/2024/02/15/fanfour-abre-1707982357492_v2_900x506.png" date="February 14, 2024" title="Marvel anuncia elenco do novo filme do quarteto fantástico" id="3" ></app-card>-->
     </div>
 </div>
 

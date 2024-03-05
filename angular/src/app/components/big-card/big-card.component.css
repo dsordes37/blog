@@ -1,9 +1,10 @@
 .container{
-    height: 27rem;
+    min-height: 28rem;
     display: block;
+    padding: .5rem;
 }.container:hover{
     background-color: rgb(26, 26, 26);
-    border: 5px solid rgb(26, 26, 26);
+    transform: scale(1.05);
 }
 img{
     object-fit: cover;
