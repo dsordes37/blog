@@ -1,35 +1,36 @@
 
 <app-title></app-title>
 
-<div class="articles">
+<div class="articles" *ngIf="load; else se">
     <div class="main_article">
-        <app-big-card img="{{artigos[0].urlToImage}}" date="{{artigos[0].publishedAt}}" title="{{artigos[0].title}}" desc="{{artigos[0].description}}" href="{{artigos[0].url}}"></app-big-card>
+        <app-big-card img="{{articles[0].urlToImage}}" date="{{articles[0].publishedAt}}" title="{{articles[0].title}}" desc="{{articles[0].description}}" href="{{articles[0].url}}"></app-big-card>
     </div>
     <div class="other_articles">
-        <app-card  img="{{artigos[1].urlToImage}}" title="{{artigos[1].title}}" date="{{artigos[1].publishedAt}}" href="{{artigos[1].url}}"></app-card>
+        <app-card  img="{{articles[1].urlToImage}}" title="{{articles[1].title}}" date="{{articles[1].publishedAt}}" href="{{articles[1].url}}"></app-card>
         <hr>
-        <app-card  img="{{artigos[2].urlToImage}}" title="{{artigos[2].title}}" date="{{artigos[2].publishedAt}}" href="{{artigos[2].url}}"></app-card>
+        <app-card  img="{{articles[2].urlToImage}}" title="{{articles[2].title}}" date="{{articles[2].publishedAt}}" href="{{articles[2].url}}"></app-card>
         <hr>
-        <app-card  img="{{artigos[3].urlToImage}}" title="{{artigos[3].title}}" date="{{artigos[3].publishedAt}}" href="{{artigos[3].url}}"></app-card>
+        <app-card  img="{{articles[3].urlToImage}}" title="{{articles[3].title}}" date="{{articles[3].publishedAt}}" href="{{articles[3].url}}"></app-card>
 
 
-        <!--
-        <app-card img="https://auditoriobotucatu.com.br/wp-content/uploads/2024/02/Trailer-de-Deadpool-3-quebra-recorde-de-audiencia-e-supera.jpg" date="February 15, 2024" title="Trailer de Deadpool 3 quebra a internet."  ></app-card>
         
-        <app-card img="https://proxy.olhardigital.com.br/wp-content/uploads/2024/01/imagem_2024-01-31_001037382.png" date="January 9, 2024" title="Começa o arco de Egg Head no anime de One Piece." id="2" ></app-card>
-        
-        <app-card img="https://conteudo.imguol.com.br/c/colunas/c7/2024/02/15/fanfour-abre-1707982357492_v2_900x506.png" date="February 14, 2024" title="Marvel anuncia elenco do novo filme do quarteto fantástico" id="3" ></app-card>-->
     </div>
 </div>
-<div class="others">
-    <app-big-card img="{{artigos[4].urlToImage}}" date="{{artigos[4].publishedAt}}" title="{{artigos[4].title}}" desc="{{artigos[4].description}}" href="{{artigos[4].url}}"></app-big-card>
+<div class="others" *ngIf="load">
+    <app-big-card img="{{articles[4].urlToImage}}" date="{{articles[4].publishedAt}}" title="{{articles[4].title}}" desc="{{articles[4].description}}" href="{{articles[4].url}}"></app-big-card>
 
-    <app-big-card img="{{artigos[5].urlToImage}}" date="{{artigos[5].publishedAt}}" title="{{artigos[5].title}}" desc="{{artigos[5].description}}" href="{{artigos[5].url}}"></app-big-card>
+    <app-big-card img="{{articles[5].urlToImage}}" date="{{articles[5].publishedAt}}" title="{{articles[5].title}}" desc="{{articles[5].description}}" href="{{articles[5].url}}"></app-big-card>
 
-    <app-big-card img="{{artigos[6].urlToImage}}" date="{{artigos[6].publishedAt}}" title="{{artigos[6].title}}" desc="{{artigos[6].description}}" href="{{artigos[6].url}}"></app-big-card>
+    <app-big-card img="{{articles[6].urlToImage}}" date="{{articles[6].publishedAt}}" title="{{articles[6].title}}" desc="{{articles[6].description}}" href="{{articles[6].url}}"></app-big-card>
 
-    <app-big-card img="{{artigos[7].urlToImage}}" date="{{artigos[7].publishedAt}}" title="{{artigos[7].title}}" desc="{{artigos[7].description}}" href="{{artigos[7].url}}"></app-big-card>
+    <app-big-card img="{{articles[7].urlToImage}}" date="{{articles[7].publishedAt}}" title="{{articles[7].title}}" desc="{{articles[7].description}}" href="{{articles[7].url}}"></app-big-card>
 </div>
+
+<ng-template #se>
+
+    <div id="se"><img src="https://controlstation.com/wp-content/plugins/bbpowerpack/assets/images/spinner.gif" alt=""></div>
+
+</ng-template>
 
 
 

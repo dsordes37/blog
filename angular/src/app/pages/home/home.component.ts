@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NewsModel} from 'src/app/models/newsModel';
+import { article } from 'src/app/models/article';
 import {NewsService} from 'src/app/services/news.service'
 
 @Component({
@@ -8,31 +8,28 @@ import {NewsService} from 'src/app/services/news.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  news:NewsModel|any
-  artigos:any[]=[]
+  articles:article[]=[]
+  load:boolean=false
 
-  bigNew:any
-  constructor(private service:NewsService) {}
-
-  ngOnInit(): void {
-    this.novas()
+  constructor(private service:NewsService) { 
+    this.topNews()
   }
 
-  novas(){
+  ngOnInit(): void {
+    
+
+  }
+
+  topNews(){
     this.service.getNews().subscribe({
       next:(res)=>{
-        this.news={
-          articles:res.articles
-        }
-        this.news.articles.map((p:any)=>{
+        res.articles.map((p:any)=>{
           if(p.urlToImage!=null){
-            this.artigos.push(p)
+            this.articles.push(p)
             
           }
-          
         })
-
-        console.log(this.artigos)
+        this.load=true
       },
       error: ()=>console.log('not found')
     })

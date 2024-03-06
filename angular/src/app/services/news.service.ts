@@ -18,7 +18,6 @@ export class NewsService {
     this.searchUrl=environment.searchNewsUrl
    }
   getNews():Observable<NewsModel>{
-    console.log(`${this.topUrl}&country=${this.country}`)
     return this.http.get<NewsModel>(`${this.topUrl}&country=${this.country}`)
   };
 
