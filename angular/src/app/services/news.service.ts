@@ -8,14 +8,21 @@ import {NewsModel} from 'src/app/models/newsModel'
   providedIn: 'root'
 })
 export class NewsService {
-  url:string=''
+  topUrl:string=''
+  searchUrl:string=''
   country:string='us'
   news?:NewsModel|any
 
   constructor(private http:HttpClient) { 
-    this.url=environment.topNewsUrl
+    this.topUrl=environment.topNewsUrl
+    this.searchUrl=environment.searchNewsUrl
    }
   getNews():Observable<NewsModel>{
-    return this.http.get<NewsModel>(`${this.url}&country=${this.country}`)
+    console.log(`${this.topUrl}&country=${this.country}`)
+    return this.http.get<NewsModel>(`${this.topUrl}&country=${this.country}`)
+  };
+
+  getSearchNews(search:string):Observable<NewsModel>{
+    return this.http.get<NewsModel>(`${this.searchUrl}&q=${search}`)
   };
 }

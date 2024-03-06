@@ -22,9 +22,6 @@ export class CardComponent implements OnInit {
   title:string="";
 
   @Input()
-  id:string="0";
-
-  @Input()
   href:string='';
 
 }

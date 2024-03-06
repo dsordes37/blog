@@ -9,9 +9,10 @@ import {NewsService} from 'src/app/services/news.service'
 })
 export class HomeComponent implements OnInit {
   news:NewsModel|any
+  artigos:any[]=[]
 
   bigNew:any
-  constructor(private service:NewsService) { }
+  constructor(private service:NewsService) {}
 
   ngOnInit(): void {
     this.novas()
@@ -23,14 +24,18 @@ export class HomeComponent implements OnInit {
         this.news={
           articles:res.articles
         }
+        this.news.articles.map((p:any)=>{
+          if(p.urlToImage!=null){
+            this.artigos.push(p)
+            
+          }
+          
+        })
+
+        console.log(this.artigos)
       },
       error: ()=>console.log('not found')
     })
     
-  }
-
-  
-
-  
-  
+  } 
 }
