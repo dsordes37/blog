@@ -1,9 +1,13 @@
+.container{
+    margin-bottom: 2rem;
+}
 h1{
     text-align: center;
-    font-size: 4.3rem;
+    font-size: clamp(1.7rem, 10vw, 3.5rem);
     font-weight: bolder;
     width: 80%;
     margin: auto;
+    padding-bottom: 2rem;
 
 }main{
     text-align: justify;
@@ -33,4 +37,10 @@ h1{
     fill: gray;
 }.return:hover>svg{
     fill: white;
+}
+
+@media(max-width:450px){
+    main, h1{
+        width: 90%;
+    }
 }

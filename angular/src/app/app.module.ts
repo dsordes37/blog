@@ -12,6 +12,7 @@ import { ContentComponent } from './pages/content/content.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MiniCardComponent } from './components/mini-card/mini-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     BigCardComponent,
     TitleComponent,
     HomeComponent,
-    ContentComponent
+    ContentComponent,
+    MiniCardComponent
   ],
   imports: [
     BrowserModule,

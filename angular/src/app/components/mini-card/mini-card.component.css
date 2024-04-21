@@ -1,0 +1,32 @@
+.container{
+    min-height: 15rem;
+    display: block;
+    padding: .5rem;
+}.container:hover{
+    background-color: rgb(209, 209, 209);
+    transform: scale(1.05);
+}
+img{
+    object-fit: cover;
+    object-position: center top;
+    height: 10rem;
+    width: 100%;
+}.date{
+    font-size: .7rem;
+    color: gray;
+}h3{
+    font-size: 1.2rem;
+    color: #111111;
+}p{
+    color: gray;
+}
+
+@media(max-width: 800px){
+    p{
+        display: none;
+    }
+}@media(max-width: 600px){
+    h3{
+        font-size: 1rem;
+    }
+}

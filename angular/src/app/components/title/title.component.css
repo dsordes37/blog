@@ -1,9 +1,10 @@
 .container{
-    padding: 2.5rem;
+    padding: 2rem;
     text-align: center;
 }h1{
     font-weight: bolder;
-    font-size: 12rem;
+    font-size: clamp(5rem, 25vw, 12rem);
 }hr{
     border: 1px solid rgb(60, 60, 60);
 }
+

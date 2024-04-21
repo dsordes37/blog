@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { article } from 'src/app/models/article';
-import {NewsService} from 'src/app/services/news.service'
+import {NewsService} from 'src/app/services/news.service';
+import {fakeData} from 'src/app/data/fakeData';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,9 @@ export class HomeComponent implements OnInit {
   load:boolean=false
 
   constructor(private service:NewsService) { 
-    this.topNews()
+    //this.topNews()
+    this.articles=fakeData
+    this.load=true
   }
 
   ngOnInit(): void {

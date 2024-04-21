@@ -24,7 +24,7 @@ export class ContentComponent implements OnInit {
 
   setValuesToContent(id:string|null){
     const result=fakeData.filter(article=> article.id == id)[0]
-    this.img= `url(${result.img})`
+    this.img= `url(${result.urlToImage})`
     this.title=result.title
 
     

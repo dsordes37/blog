@@ -1,5 +1,5 @@
 .container{
-    min-height: 28rem;
+    min-height: 25rem;
     display: block;
     padding: .5rem;
 }.container:hover{
@@ -9,7 +9,7 @@
 img{
     object-fit: cover;
     object-position: center top;
-    height: 70%;
+    height: 16rem;
     width: 100%;
 }.date{
     font-size: .7rem;

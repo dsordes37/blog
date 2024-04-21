@@ -1,35 +1,38 @@
 
 <app-title></app-title>
 
-<div class="articles" *ngIf="load; else se">
+<div class="articles" *ngIf="load; else loading">
     <div class="main_article">
-        <app-big-card img="{{articles[0].urlToImage}}" date="{{articles[0].publishedAt}}" title="{{articles[0].title}}" desc="{{articles[0].description}}" href="{{articles[0].url}}"></app-big-card>
+        <app-big-card img="{{articles[0].urlToImage}}" date="{{articles[0].publishedAt}}" title="{{articles[0].title}}" desc="{{articles[0].description}}" href="content/{{articles[0].id}}"></app-big-card>
     </div>
+
     <div class="other_articles">
-        <app-card  img="{{articles[1].urlToImage}}" title="{{articles[1].title}}" date="{{articles[1].publishedAt}}" href="{{articles[1].url}}"></app-card>
-        <hr>
-        <app-card  img="{{articles[2].urlToImage}}" title="{{articles[2].title}}" date="{{articles[2].publishedAt}}" href="{{articles[2].url}}"></app-card>
-        <hr>
-        <app-card  img="{{articles[3].urlToImage}}" title="{{articles[3].title}}" date="{{articles[3].publishedAt}}" href="{{articles[3].url}}"></app-card>
-
-
+        <app-card img="{{articles[1].urlToImage}}" title="{{articles[1].title}}" date="{{articles[1].publishedAt}}" href="content/{{articles[1].id}}" ></app-card> 
         
+        <hr>
+        
+        <app-card img="{{articles[2].urlToImage}}" title="{{articles[2].title}}" date="{{articles[2].publishedAt}}" href="content/{{articles[2].id}}" ></app-card> 
+
+        <hr>
+        
+        <app-card img="{{articles[3].urlToImage}}" title="{{articles[3].title}}" date="{{articles[3].publishedAt}}" href="content/{{articles[3].id}}" ></app-card> 
     </div>
+    
 </div>
 <div class="others" *ngIf="load">
-    <app-big-card img="{{articles[4].urlToImage}}" date="{{articles[4].publishedAt}}" title="{{articles[4].title}}" desc="{{articles[4].description}}" href="{{articles[4].url}}"></app-big-card>
-
-    <app-big-card img="{{articles[5].urlToImage}}" date="{{articles[5].publishedAt}}" title="{{articles[5].title}}" desc="{{articles[5].description}}" href="{{articles[5].url}}"></app-big-card>
-
-    <app-big-card img="{{articles[6].urlToImage}}" date="{{articles[6].publishedAt}}" title="{{articles[6].title}}" desc="{{articles[6].description}}" href="{{articles[6].url}}"></app-big-card>
-
-    <app-big-card img="{{articles[7].urlToImage}}" date="{{articles[7].publishedAt}}" title="{{articles[7].title}}" desc="{{articles[7].description}}" href="{{articles[7].url}}"></app-big-card>
+    <h2>pilihan editor</h2>
+    <div>
+        <app-mini-card *ngFor="let article of articles | slice:4" img="{{article.urlToImage}}" date="{{article.publishedAt}}" title="{{article.title}}" desc="{{article.description}}" href="content/{{article.id}}"></app-mini-card>
+    </div>
 </div>
 
-<ng-template #se>
 
+
+
+
+
+<ng-template #loading>
     <div id="se"><img src="https://controlstation.com/wp-content/plugins/bbpowerpack/assets/images/spinner.gif" alt=""></div>
-
 </ng-template>
 
 

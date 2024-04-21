@@ -1,13 +1,17 @@
 .container{
     display: flex;
     justify-content: space-between;
-    padding: 2.5rem;
+    padding: 2.5rem 2.5rem 1rem;
 }
 a{
     color: gray;
     font-size: .9rem;
 }a:hover{
     color: white;
+}
+.menu{
+    display: flex;
+    gap: 1rem;
 }
 nav{
     display: flex;
@@ -30,7 +34,7 @@ nav{
 }.social{
     display: flex;
     gap: 1rem;
-}.social>a{
+}.circle_bt{
     padding: 3px;
     width: 2rem;
     height: 2rem;
@@ -44,4 +48,10 @@ nav{
     background-color: rgb(41, 41, 41);
 }.social>a:hover>svg{
     fill: white;
+}
+
+@media(max-width: 800px){
+    nav, .social{
+        display: none
+    }
 }
